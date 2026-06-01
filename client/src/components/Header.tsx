@@ -40,10 +40,10 @@ const Header: React.FC = () => {
       );
       
       if (contactChoice) {
-        window.open('tel:+919693631158', '_self');
+        window.open('tel:+910000000000', '_self');
       } else {
         const message = encodeURIComponent('Hi! I want to book a test. Please help me.');
-        window.open(`https://wa.me/919693631158?text=${message}`, '_blank');
+        window.open(`https://wa.me/910000000000?text=${message}`, '_blank');
       }
     }
     setIsMenuOpen(false);

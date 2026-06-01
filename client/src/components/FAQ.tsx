@@ -33,7 +33,7 @@ const FAQ: React.FC = () => {
   };
 
   const handleContactCall = () => {
-    window.open('tel:+919693631158', '_self');
+    window.open('tel:+910000000000', '_self');
   };
 
   const handleContactEmail = () => {
@@ -42,7 +42,7 @@ const FAQ: React.FC = () => {
 
   const handleContactWhatsApp = () => {
     const message = encodeURIComponent('Hi! I have a question about your services. Please help me.');
-    window.open(`https://wa.me/919693631158?text=${message}`, '_blank');
+    window.open(`https://wa.me/910000000000?text=${message}`, '_blank');
   };
 
   if (isLoading) {
@@ -194,7 +194,7 @@ const FAQ: React.FC = () => {
             </button>
           </div>
           <div className="mt-4 text-sm text-gray-600">
-            <p>📞 +91 96936 31158 | 📧 support@thelabs.com</p>
+            <p>📞 +91 00000 00000 | 📧 support@thelabs.com</p>
             <p>Available 24/7 for your support</p>
           </div>
         </div>

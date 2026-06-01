@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   };
 
   const handleContactCall = () => {
-    window.open('tel:+919693631158', '_self');
+    window.open('tel:+910000000000', '_self');
   };
 
   const handleContactEmail = () => {
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
 
   const handleContactWhatsApp = () => {
     const message = encodeURIComponent('Hi! I need assistance with your services.');
-    window.open(`https://wa.me/919693631158?text=${message}`, '_blank');
+    window.open(`https://wa.me/910000000000?text=${message}`, '_blank');
   };
 
   return (
@@ -128,9 +128,9 @@ const Footer: React.FC = () => {
                     onClick={handleContactCall}
                     className="text-secondary-300 hover:text-primary-300 transition-colors duration-200"
                   >
-                    +919693631158
+                    +91 00000 00000
                   </button>
-                  <p className="text-secondary-300">Emergency: +919693631158</p>
+                  <p className="text-secondary-300">Emergency: +91 00000 00000</p>
                 </div>
               </div>
               

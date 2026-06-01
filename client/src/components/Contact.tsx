@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
   };
 
   const handleCall = () => {
-    window.open('tel:+919693631158', '_self');
+    window.open('tel:+910000000000', '_self');
   };
 
   const handleEmail = () => {
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent('Hi! I need assistance with your services.');
-    window.open(`https://wa.me/919693631158?text=${message}`, '_blank');
+    window.open(`https://wa.me/910000000000?text=${message}`, '_blank');
   };
 
   const handleDirections = () => {
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
       icon: Phone,
       title: 'Call Us',
       description: 'Speak directly with our support team',
-      value: '+91 96936 31158',
+      value: '+91 00000 00000',
       action: handleCall,
       color: 'bg-blue-500'
     },
@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
       icon: MessageCircle,
       title: 'WhatsApp',
       description: 'Quick support via WhatsApp',
-      value: '+91 96936 31158',
+      value: '+91 00000 00000',
       action: handleWhatsApp,
       color: 'bg-green-500'
     }
@@ -98,19 +98,19 @@ const Contact: React.FC = () => {
     {
       name: 'Head Office',
       address: '123 Healthcare Street, Medical District, Patna - 800001',
-      phone: '+91 96936 31158',
+      phone: '+91 00000 00000',
       hours: 'Mon-Sun: 6:00 AM - 10:00 PM'
     },
     {
       name: 'Kankarbagh Branch',
       address: 'Near Kankarbagh Main Road, Patna - 800020',
-      phone: '+91 96936 31158',
+      phone: '+91 00000 00000',
       hours: 'Mon-Sun: 7:00 AM - 9:00 PM'
     },
     {
       name: 'Boring Road Branch',
       address: 'Boring Road, Near Hanuman Mandir, Patna - 800001',
-      phone: '+91 96936 31158',
+      phone: '+91 00000 00000',
       hours: 'Mon-Sun: 7:00 AM - 9:00 PM'
     }
   ];

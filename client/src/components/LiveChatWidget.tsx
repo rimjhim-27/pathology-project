@@ -47,7 +47,7 @@ const LiveChatWidget: React.FC = () => {
       } else if (lowerMessage.includes('area') || lowerMessage.includes('location')) {
         responseText = 'We provide services across all areas of Patna including Kankarbagh, Boring Road, Rajendra Nagar, Patna City, Gandhi Maidan, Danapur, and Fraser Road.';
       } else {
-        responseText = 'Thank you for your message! For immediate assistance, you can also call us at +91 96936 31158 or email us at support@thelabs.com. How else can I help you?';
+        responseText = 'Thank you for your message! For immediate assistance, you can also call us at +91 00000 00000 or email us at support@thelabs.com. How else can I help you?';
       }
       
       const supportMessage: Message = {
@@ -220,7 +220,7 @@ const LiveChatWidget: React.FC = () => {
             <div className="px-4 pb-4">
               <div className="flex justify-center space-x-4 text-xs">
                 <a
-                  href="tel:+919693631158"
+                  href="tel:+910000000000"
                   className="flex items-center space-x-1 text-blue-600 hover:text-blue-700"
                 >
                   <Phone className="w-3 h-3" />
@@ -234,7 +234,7 @@ const LiveChatWidget: React.FC = () => {
                   <span>Email</span>
                 </a>
                 <a
-                  href="https://wa.me/919693631158"
+                  href="https://wa.me/910000000000"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-1 text-blue-600 hover:text-blue-700"

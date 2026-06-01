@@ -102,7 +102,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, testData }
       
       Best regards,
       The LABs Team
-      Phone: +91 96936 31158
+      Phone: +91 00000 00000
       Email: rimjhim58096@gmail.com
     `;
 

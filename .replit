@@ -3,7 +3,7 @@ run = "npm run dev"
 hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
 
 [env]
-DATABASE_URL = "postgresql://username:password@localhost:5432/database_name"
+DATABASE_URL = "postgresql://neondb_owner:npg_EMQh21sXGZpH@ep-dark-sunset-apanr53y-pooler.c-7.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
 
 [nix]
 channel = "stable-24_05"

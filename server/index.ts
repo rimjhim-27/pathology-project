@@ -14,8 +14,22 @@ app.use(
   }),
 );
 
+// Configure CORS based on environment
+const corsOrigins = (() => {
+  if (process.env.NODE_ENV === "production") {
+    // In production, allow requests from the same origin
+    // Render will serve the built client and API from the same domain
+    return [
+      process.env.RENDER_EXTERNAL_URL || "*",
+      ...(process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : []),
+    ];
+  }
+  // Development: allow localhost and 127.0.0.1 on various ports
+  return ["http://localhost:5001", "http://127.0.0.1:5001", "http://localhost:5173"];
+})();
+
 app.use(cors({
-  origin: ["http://localhost:5001", "http://127.0.0.1:5001", "http://localhost:5173"],
+  origin: corsOrigins,
   credentials: true,
 }));
 
@@ -85,7 +99,9 @@ return;
   // Serve the app on the configured port.
   // reusePort is not supported on Windows, so only enable it on non-Windows hosts.
   const port = Number(process.env.PORT || 5000);
-  const host = process.env.HOST || "127.0.0.1";
+  // In production (Render), bind to 0.0.0.0 to listen on all interfaces
+  // In development, use localhost (127.0.0.1)
+  const host = process.env.HOST || (process.env.NODE_ENV === "production" ? "0.0.0.0" : "127.0.0.1");
   const listenOptions: { port: number; host: string; reusePort?: boolean } = {
     port,
     host,
@@ -96,6 +112,11 @@ return;
   }
 
   server.listen(listenOptions, () => {
-    log(`serving on http://${host}:${port}`);
+    const displayHost = host === "0.0.0.0" ? "0.0.0.0 (all interfaces)" : host;
+    log(`✅ Server listening on ${displayHost}:${port}`);
+    log(`📡 Environment: ${process.env.NODE_ENV}`);
+    if (process.env.RENDER_EXTERNAL_URL) {
+      log(`🌐 External URL: ${process.env.RENDER_EXTERNAL_URL}`);
+    }
   });
 })();
